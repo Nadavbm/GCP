@@ -90,7 +90,7 @@ askjdh                               NetworkName  INGRESS    1000      tcp:5432
 
 ## To list specific FW rules:
 
-$ gcloud compute firewall-rules list akfr-login,projex-internal-ingress
+$ gcloud compute firewall-rules list abcd-login,projex-internal-ingress
 
 NAME                   NETWORK      DIRECTION  PRIORITY  ALLOW          DENY
 fw-serv                NetworkName  INGRESS    1000      tcp:6543-6546
@@ -98,7 +98,7 @@ otherfw                NetworkName  INGRESS    1000      all
 
 ## To create a firewall rule:
 
-$ gcloud compute --project=service-123123 firewall-rules create fw-login --description=SomeDescription 8.8.8.8 --direction=INGRESS --priority=1000 --network=NetworkName --action=ALLOW --rules=tcp:2134-1235 --source-ranges=8.8.8.8,0.0.0.0/0 --target-tags=akes-login
+$ gcloud compute --project=service-123123 firewall-rules create fw-login --description=SomeDescription 8.8.8.8 --direction=INGRESS --priority=1000 --network=NetworkName --action=ALLOW --rules=tcp:2134-1235 --source-ranges=8.8.8.8,0.0.0.0/0 --target-tags=abcd-login
 $ gcloud compute --project=service-123123 firewall-rules create project-internal-ingress --direction=INGRESS --priority=1000 --network=NetworkName --action=ALLOW --rules=all --source-ranges=10.10.10.0/24 --target-tags=prox
 
 ## Connect to VM via Console:
